@@ -13,6 +13,11 @@ from datetime import datetime
 plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
+# Schriftart konfigurieren - Cambria verwenden
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.serif'] = ['Cambria', 'Times New Roman', 'DejaVu Serif', 'serif']
+plt.rcParams['font.size'] = 11
+
 # Daten laden
 monthly_data = pd.read_csv('era5_santander_1975_2024_monthly.csv')
 climate_data = pd.read_csv('era5_santander_1975_2024_monthly_climatology.csv')
